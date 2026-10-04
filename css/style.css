@@ -535,6 +535,12 @@ a {
   font-weight: 600;
   white-space: nowrap;
   animation: bob 4s ease-in-out infinite;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.float-badge.is-swapping {
+  opacity: 0;
+  filter: blur(4px);
 }
 
 .float-badge i {

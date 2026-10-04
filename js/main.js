@@ -1,10 +1,31 @@
 /**
- * Portfolio interactions: theme toggle, typing effect, scroll reveal,
- * project filter, navbar behaviour and the contact form.
+ * Portfolio interactions: theme toggle, typing effect, rotating hero badges,
+ * scroll reveal, project filter, navbar behaviour and the contact form.
  */
 
 const root = document.documentElement;
 const CONTACT_EMAIL = "abriloman58@gmail.com";
+
+/** Stacks each hero badge cycles through, in badge order: [icon, color, label]. */
+const BADGE_STACKS = [
+  [
+    ["bi-filetype-jsx", "#149eca", "React / Next.js"],
+    ["bi-wind", "#38bdf8", "Tailwind CSS"],
+    ["bi-signpost-split", "#ef4444", "TanStack"],
+  ],
+  [
+    ["bi-filetype-tsx", "#3178c6", "TypeScript"],
+    ["bi-hexagon-fill", "#5fa04e", "Node.js"],
+    ["bi-server", "#e0234e", "NestJS"],
+  ],
+  [
+    ["bi-database-fill", "#3ecf8e", "Supabase"],
+    ["bi-database", "#4169e1", "PostgreSQL"],
+    ["bi-box-seam", "#2496ed", "Docker"],
+  ],
+];
+const BADGE_INTERVAL = 3000;
+const BADGE_FADE = 300;
 
 /** Toggle between dark and light themes and remember the choice. */
 function initTheme() {
@@ -41,6 +62,34 @@ function initTyping() {
   };
 
   setTimeout(tick, 2000);
+}
+
+/** Fade a hero badge out, swap its icon and label, then fade it back in. */
+function swapBadge(badge, [icon, color, label]) {
+  badge.classList.add("is-swapping");
+  setTimeout(() => {
+    const iconEl = badge.querySelector("i");
+    iconEl.className = `bi ${icon}`;
+    iconEl.style.color = color;
+    badge.querySelector(".badge-label").textContent = label;
+    badge.classList.remove("is-swapping");
+  }, BADGE_FADE);
+}
+
+/** Cycle each hero badge through its stacks, staggered so they change one after another. */
+function initBadgeRotation() {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const badges = document.querySelectorAll(".float-badge");
+  let step = 0;
+
+  setInterval(() => {
+    step += 1;
+    badges.forEach((badge, i) => {
+      const stacks = BADGE_STACKS[i];
+      setTimeout(() => swapBadge(badge, stacks[step % stacks.length]), i * 250);
+    });
+  }, BADGE_INTERVAL);
 }
 
 /** Count a number up from zero to its data-count value. */
@@ -137,6 +186,7 @@ function initContactForm() {
 
 initTheme();
 initTyping();
+initBadgeRotation();
 initReveal();
 initProjectFilter();
 initNavbar();
