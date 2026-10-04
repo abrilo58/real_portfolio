@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abrham Wondimu | Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Abrham Wondimu - Full-stack developer building secure, production-ready web apps with React, Next.js, NestJS and Supabase."
+    />
+
+    <script>
+      document.documentElement.classList.add("js");
+      document.documentElement.setAttribute(
+        "data-bs-theme",
+        localStorage.getItem("theme") ||
+          (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+      );
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+      integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk"
+      crossorigin="anonymous"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#mainNav"
+    data-bs-root-margin="0px 0px -40%"
+    data-bs-smooth-scroll="true"
+    tabindex="0"
+  >
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#home">AW<span class="text-gradient">.</span></a>
+
+        <div class="d-flex align-items-center gap-2 order-lg-last">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark and light theme">
+            <i class="bi bi-sun-fill icon-sun"></i>
+            <i class="bi bi-moon-stars-fill icon-moon"></i>
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navLinks"
+            aria-controls="navLinks"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navLinks">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== Hero ===== -->
+    <header class="hero" id="home">
+      <div class="hero-grid"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7 order-2 order-lg-1 text-center text-lg-start">
+            <span class="hero-badge">
+              <span class="pulse-dot"></span> Open to new opportunities
+            </span>
+            <p class="hero-hello">Hi there, I'm</p>
+            <h1 class="hero-title">Abrham <span class="text-gradient">Wondimu</span></h1>
+            <p class="hero-role">
+              I'm a
+              <span
+                class="typed"
+                id="typed"
+                data-roles="Full-Stack Developer|React &amp; Next.js Engineer|NestJS &amp; Supabase Builder|Security-Minded Engineer"
+                >Full-Stack Developer</span
+              ><span class="caret"></span>
+            </p>
+            <p class="hero-lead mx-auto mx-lg-0">
+              I build and ship full-stack web products, from polished React and Next.js interfaces
+              to secure APIs and databases running in production.
+            </p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+              <a href="#projects" class="btn btn-gradient btn-lg">
+                View My Work <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+              <a href="#contact" class="btn btn-ghost btn-lg">Let's Talk</a>
+            </div>
+            <div class="social-links justify-content-center justify-content-lg-start mt-4">
+              <a href="https://github.com/abrilo58" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/awondimu-it" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:abriloman58@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2">
+            <div class="photo-wrap">
+              <div class="photo-ring">
+                <img src="images/profile.png" alt="Portrait of Abrham Wondimu" />
+              </div>
+              <span class="float-badge fb-1"><i class="bi bi-filetype-jsx text-react"></i> React / Next.js</span>
+              <span class="float-badge fb-2"><i class="bi bi-filetype-tsx text-ts"></i> TypeScript</span>
+              <span class="float-badge fb-3"><i class="bi bi-database-fill text-db"></i> Supabase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator d-none d-md-block" aria-label="Scroll to About section"><span></span></a>
+    </header>
+
+    <main>
+      <!-- ===== Stats ===== -->
+      <section class="stats">
+        <div class="container">
+          <div class="stats-card reveal">
+            <div class="row g-4 text-center">
+              <div class="col-6 col-md-3">
+                <div class="stat-number"><span class="counter" data-count="8">8</span></div>
+                <p class="stat-label">Projects Built</p>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="stat-number"><span class="counter" data-count="17">17</span></div>
+                <p class="stat-label">Repositories</p>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="stat-number"><span class="counter" data-count="1400">1400</span>+</div>
+                <p class="stat-label">Commits</p>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="stat-number"><span class="counter" data-count="4">4</span></div>
+                <p class="stat-label">Live Sites</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== About ===== -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="row align-items-center gy-5 gx-lg-5">
+            <div class="col-lg-6 reveal">
+              <span class="section-eyebrow">01 &mdash; About me</span>
+              <h2 class="section-title">
+                From idea to <span class="text-gradient">production.</span>
+              </h2>
+              <p class="section-text">
+                I'm a full-stack developer with a background in IT and cybersecurity. I build
+                products end to end: responsive interfaces in React and Next.js, APIs in NestJS and
+                Node, and databases in PostgreSQL and Supabase, then deploy and run them in
+                production. Security is part of the design from day one, not an afterthought.
+              </p>
+              <ul class="about-list">
+                <li><i class="bi bi-check2-circle"></i> Live products with real users, payments and AI features</li>
+                <li><i class="bi bi-check2-circle"></i> Security-first: row-level security, JWT auth and rate limits</li>
+                <li><i class="bi bi-check2-circle"></i> SEO, performance and accessibility built in</li>
+                <li><i class="bi bi-check2-circle"></i> CI/CD pipelines, Docker and cloud deployments</li>
+              </ul>
+              <a href="#contact" class="btn btn-gradient mt-2">
+                Let's work together <i class="bi bi-arrow-up-right ms-1"></i>
+              </a>
+            </div>
+
+            <div class="col-lg-6 reveal" style="--delay: 0.15s">
+              <div class="code-card">
+                <div class="code-card-header">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                  <span class="code-file"><i class="bi bi-filetype-tsx"></i> developer.ts</span>
+                </div>
+<pre class="code-body"><code><span class="line"><span class="tok-at">const</span> <span class="tok-sel">developer</span> <span class="tok-punc">= {</span></span>
+<span class="line">  <span class="tok-prop">name</span><span class="tok-punc">:</span> <span class="tok-str">"Abrham Wondimu"</span><span class="tok-punc">,</span></span>
+<span class="line">  <span class="tok-prop">role</span><span class="tok-punc">:</span> <span class="tok-str">"Full-Stack Developer"</span><span class="tok-punc">,</span></span>
+<span class="line">  <span class="tok-prop">frontend</span><span class="tok-punc">: [</span><span class="tok-str">"React"</span><span class="tok-punc">,</span> <span class="tok-str">"Next.js"</span><span class="tok-punc">,</span> <span class="tok-str">"Tailwind"</span><span class="tok-punc">],</span></span>
+<span class="line">  <span class="tok-prop">backend</span><span class="tok-punc">: [</span><span class="tok-str">"NestJS"</span><span class="tok-punc">,</span> <span class="tok-str">"Supabase"</span><span class="tok-punc">,</span> <span class="tok-str">"Postgres"</span><span class="tok-punc">],</span></span>
+<span class="line">  <span class="tok-prop">focus</span><span class="tok-punc">: [</span><span class="tok-str">"secure"</span><span class="tok-punc">,</span> <span class="tok-str">"fast"</span><span class="tok-punc">,</span> <span class="tok-str">"accessible"</span><span class="tok-punc">],</span></span>
+<span class="line">  <span class="tok-prop">projectsShipped</span><span class="tok-punc">:</span> <span class="tok-val">8</span><span class="tok-punc">,</span></span>
+<span class="line">  <span class="tok-prop">openToWork</span><span class="tok-punc">:</span> <span class="tok-val">true</span><span class="tok-punc">,</span></span>
+<span class="line"><span class="tok-punc">};</span></span>
+<span class="line"></span>
+<span class="line"><span class="tok-at">export default</span> <span class="tok-sel">developer</span><span class="tok-punc">;</span></span></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Skills ===== -->
+      <section class="section section-alt" id="skills">
+        <div class="container">
+          <div class="section-head text-center reveal">
+            <span class="section-eyebrow">02 &mdash; Skills</span>
+            <h2 class="section-title">My <span class="text-gradient">toolkit</span></h2>
+            <p class="section-text mx-auto">
+              The stack behind my live products, from the interface down to the database and the
+              server it runs on.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="glass-card skill-card reveal">
+                <div class="skill-icon"><i class="bi bi-window-stack text-react"></i></div>
+                <h3 class="h4">Frontend</h3>
+                <p>Fast, responsive and accessible interfaces with modern React frameworks.</p>
+                <ul class="tech-pills">
+                  <li>React</li>
+                  <li>Next.js</li>
+                  <li>TypeScript</li>
+                  <li>Tailwind CSS</li>
+                  <li>TanStack</li>
+                  <li>HTML / CSS</li>
+                  <li>Bootstrap</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="glass-card skill-card reveal" style="--delay: 0.1s">
+                <div class="skill-icon"><i class="bi bi-database-gear text-db"></i></div>
+                <h3 class="h4">Backend &amp; Data</h3>
+                <p>APIs, authentication and data models that stay correct as products grow.</p>
+                <ul class="tech-pills">
+                  <li>Node.js</li>
+                  <li>NestJS</li>
+                  <li>Express</li>
+                  <li>PostgreSQL</li>
+                  <li>MySQL</li>
+                  <li>Supabase</li>
+                  <li>Prisma / TypeORM</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="glass-card skill-card reveal" style="--delay: 0.2s">
+                <div class="skill-icon"><i class="bi bi-shield-lock text-shield"></i></div>
+                <h3 class="h4">DevOps &amp; Security</h3>
+                <p>Shipping safely: automated deploys, hardened servers and least-privilege data access.</p>
+                <ul class="tech-pills">
+                  <li>Docker</li>
+                  <li>GitHub Actions</li>
+                  <li>Vercel</li>
+                  <li>nginx</li>
+                  <li>Cloudflare</li>
+                  <li>JWT / OAuth</li>
+                  <li>Row-Level Security</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5 reveal">
+            <p class="chips-title">Also comfortable with</p>
+            <div class="chips">
+              <span class="chip"><i class="bi bi-filetype-py"></i> Python</span>
+              <span class="chip"><i class="bi bi-lightning-charge"></i> Redis</span>
+              <span class="chip"><i class="bi bi-credit-card"></i> Stripe</span>
+              <span class="chip"><i class="bi bi-stars"></i> OpenAI API</span>
+              <span class="chip"><i class="bi bi-check2-square"></i> Playwright</span>
+              <span class="chip"><i class="bi bi-bug"></i> Vitest &amp; Jest</span>
+              <span class="chip"><i class="bi bi-magic"></i> Framer Motion</span>
+              <span class="chip"><i class="bi bi-phone"></i> PWA</span>
+              <span class="chip"><i class="bi bi-git"></i> Git &amp; GitHub</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Projects ===== -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-head text-center reveal">
+            <span class="section-eyebrow">03 &mdash; Projects</span>
+            <h2 class="section-title">Selected <span class="text-gradient">work</span></h2>
+            <p class="section-text mx-auto">
+              Real products I've designed, built and shipped, from live platforms to client work
+              and concept builds.
+            </p>
+          </div>
+
+          <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+            <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" type="button" data-filter="live" aria-pressed="false">Live</button>
+            <button class="filter-btn" type="button" data-filter="fullstack" aria-pressed="false">Full-Stack</button>
+            <button class="filter-btn" type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6 project-item" data-category="fullstack live">
+              <article class="project-card reveal">
+                <div class="project-thumb project-thumb-img">
+                  <img src="images/projects/mastercybersec.jpg" alt="MasterCyberSec homepage" width="960" height="600" loading="lazy" />
+                  <span class="badge-status badge-live"><span class="pulse-dot"></span> Live</span>
+                </div>
+                <div class="project-body">
+                  <div class="project-tags"><span>React</span><span>TypeScript</span><span>NestJS</span><span>MySQL</span><span>Redis</span><span>OpenAI</span></div>
+                  <h3 class="h5">MasterCyberSec</h3>
+                  <p>Exam-prep platform for CompTIA, CISSP and other security certifications: practice questions, timed exam simulations with auto-grading, an AI study assistant, forums and an admin dashboard, all backed by a NestJS API with payments and email campaigns.</p>
+                  <div class="project-links">
+                    <a href="https://mastercybersec.pro" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Visit live site</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-lg-6 project-item" data-category="fullstack live">
+              <article class="project-card reveal" style="--delay: 0.1s">
+                <div class="project-thumb project-thumb-img">
+                  <img src="images/projects/autobridge.jpg" alt="AutoBridge car marketplace" width="960" height="600" loading="lazy" />
+                  <span class="badge-status badge-live"><span class="pulse-dot"></span> Live</span>
+                </div>
+                <div class="project-body">
+                  <div class="project-tags"><span>React</span><span>TanStack Start</span><span>NestJS</span><span>PostgreSQL</span><span>PWA</span></div>
+                  <h3 class="h5">AutoBridge</h3>
+                  <p>Multi-tenant car marketplace and dealer ERP for Ethiopia that connects dealers, banks and insurers with strict data isolation between organizations. Available in English, Amharic and Afaan Oromoo, and installable as a PWA and Android app.</p>
+                  <div class="project-links">
+                    <a href="https://nappy.mastercybersec.pro" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Visit live site</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 project-item" data-category="fullstack live">
+              <article class="project-card reveal">
+                <div class="project-thumb project-thumb-img">
+                  <img src="images/projects/habesha-salons.jpg" alt="Habesha Hair Salons homepage" width="960" height="600" loading="lazy" />
+                  <span class="badge-status badge-beta"><i class="bi bi-cone-striped"></i> Beta</span>
+                </div>
+                <div class="project-body">
+                  <div class="project-tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Tailwind</span></div>
+                  <h3 class="h5">Habesha Hair Salons</h3>
+                  <p>Booking platform for Habesha hair salons in the US: find nearby salons, see real openings and book, with passwordless sign-in, CAPTCHA protection and SEO city pages.</p>
+                  <div class="project-links">
+                    <a href="https://habesha-salons-web.vercel.app" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> View beta</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 project-item" data-category="fullstack live">
+              <article class="project-card reveal" style="--delay: 0.1s">
+                <div class="project-thumb project-thumb-img">
+                  <img src="images/projects/home-custom.jpg" alt="Home Custom Construction homepage" width="960" height="600" loading="lazy" />
+                  <span class="badge-status badge-live"><span class="pulse-dot"></span> Live</span>
+                </div>
+                <div class="project-body">
+                  <div class="project-tags"><span>Next.js</span><span>Supabase</span><span>Tailwind</span><span>Freelance</span></div>
+                  <h3 class="h5">Home Custom Construction</h3>
+                  <p>Website for a home-remodeling contractor with before/after galleries, a photo-upload estimate form and a private dashboard so the owner can update content without code.</p>
+                  <div class="project-links">
+                    <a href="https://narges.mastercybersec.pro" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Visit live site</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 project-item" data-category="fullstack">
+              <article class="project-card reveal" style="--delay: 0.2s">
+                <div class="project-thumb thumb-4">
+                  <div class="mock-window">
+                    <div class="mock-bar"><span></span><span></span><span></span></div>
+                    <div class="mock-content"><i class="bi bi-building-check"></i></div>
+                  </div>
+                  <span class="badge-status badge-private"><i class="bi bi-lock-fill"></i> Private</span>
+                </div>
+                <div class="project-body">
+                  <div class="project-tags"><span>React</span><span>TypeScript</span><span>Supabase</span><span>Leaflet</span></div>
+                  <h3 class="h5">Dayuse Ethiopia</h3>
+                  <p>Day-use hotel booking for Ethiopian cities: reserve rooms by time slot, browse an interactive map and check in with a QR-code ticket, with dashboards for hotel owners and admins.</p>
+                  <div class="project-links">
+                    <span class="project-private"><i class="bi bi-lock"></i> Private codebase, demo on request</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 project-item" data-category="fullstack">
+              <article class="project-card reveal">
+                <div class="project-thumb thumb-6">
+                  <div class="mock-window">
+                    <div class="mock-bar"><span></span><span></span><span></span></div>
+                    <div class="mock-content"><i class="bi bi-mortarboard"></i></div>
+                  </div>
+                  <span class="badge-status badge-private"><i class="bi bi-lock-fill"></i> Private</span>
+                </div>
+                <div class="project-body">
+                  <div class="project-tags"><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span><span>Python</span></div>
+                  <h3 class="h5">Ethio Exam Prep</h3>
+                  <p>Practice platform for Ethiopia's Grade 12 national exam across 7 subjects and years of past papers, with a Python pipeline that turns official exam PDFs into structured questions.</p>
+                  <div class="project-links">
+                    <span class="project-private"><i class="bi bi-lock"></i> Private codebase, demo on request</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 project-item" data-category="frontend">
+              <article class="project-card reveal" style="--delay: 0.1s">
+                <div class="project-thumb thumb-2">
+                  <div class="mock-window">
+                    <div class="mock-bar"><span></span><span></span><span></span></div>
+                    <div class="mock-content"><i class="bi bi-play-btn"></i></div>
+                  </div>
+                  <span class="badge-status badge-open"><i class="bi bi-github"></i> Open source</span>
+                </div>
+                <div class="project-body">
+                  <div class="project-tags"><span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>TMDB API</span></div>
+                  <h3 class="h5">Netflix Clone</h3>
+                  <p>Netflix-style streaming UI on live TMDB data: category rows that stream in with skeleton loaders, genre browsing, title pages with trailers, and search.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/abrilo58/netflix-clone" target="_blank" rel="noopener"><i class="bi bi-github"></i> View code</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 project-item" data-category="frontend">
+              <article class="project-card reveal" style="--delay: 0.2s">
+                <div class="project-thumb project-thumb-img">
+                  <img src="images/projects/blueterra.jpg" alt="Blueterra website redesign" width="960" height="600" loading="lazy" />
+                  <span class="badge-status badge-concept"><i class="bi bi-palette"></i> Concept</span>
+                </div>
+                <div class="project-body">
+                  <div class="project-tags"><span>Next.js</span><span>Tailwind</span><span>Framer Motion</span></div>
+                  <h3 class="h5">Blueterra Redesign</h3>
+                  <p>Redesign concept for a consulting firm's website with video hero sections, scroll animations, a blog and a careers page.</p>
+                  <div class="project-links">
+                    <span class="project-private"><i class="bi bi-lock"></i> Private codebase, demo on request</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Services ===== -->
+      <section class="section section-alt" id="services">
+        <div class="container">
+          <div class="section-head text-center reveal">
+            <span class="section-eyebrow">04 &mdash; Services</span>
+            <h2 class="section-title">What I can <span class="text-gradient">do for you</span></h2>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="glass-card service-card reveal">
+                <span class="service-num">01</span>
+                <div class="service-icon"><i class="bi bi-layers"></i></div>
+                <h3 class="h4">Full-Stack Web Apps</h3>
+                <p class="mb-0">Booking platforms, marketplaces and dashboards built end to end, from the UI to the database and deployment.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="glass-card service-card reveal" style="--delay: 0.1s">
+                <span class="service-num">02</span>
+                <div class="service-icon"><i class="bi bi-display"></i></div>
+                <h3 class="h4">Business Websites</h3>
+                <p class="mb-0">Fast, SEO-friendly websites with content the owner can edit, quote forms and polished animations.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="glass-card service-card reveal" style="--delay: 0.2s">
+                <span class="service-num">03</span>
+                <div class="service-icon"><i class="bi bi-shield-check"></i></div>
+                <h3 class="h4">Secure APIs &amp; Databases</h3>
+                <p class="mb-0">Authentication, access rules, rate limits and data models designed with security in mind from day one.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Journey ===== -->
+      <section class="section" id="journey">
+        <div class="container">
+          <div class="section-head text-center reveal">
+            <span class="section-eyebrow">05 &mdash; Journey</span>
+            <h2 class="section-title">My <span class="text-gradient">path</span> so far</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item reveal">
+              <div class="glass-card">
+                <span class="timeline-date">Oct 2026</span>
+                <h3 class="h5">Building Habesha Hair Salons</h3>
+                <p class="mb-0">A US booking platform for Habesha salons, now in beta with three apps on one Supabase backend.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="glass-card">
+                <span class="timeline-date">Aug 2026</span>
+                <h3 class="h5">AutoBridge Goes Live</h3>
+                <p class="mb-0">Shipped a multi-tenant car marketplace and dealer ERP to production, with web and Android apps.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="glass-card">
+                <span class="timeline-date">Aug 2026</span>
+                <h3 class="h5">Evangadi Tech Bootcamp</h3>
+                <p class="mb-0">Sharpening web fundamentals in HTML, CSS, Bootstrap and responsive design.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="glass-card">
+                <span class="timeline-date">Jun 2026</span>
+                <h3 class="h5">First Freelance Client</h3>
+                <p class="mb-0">Delivered a website and content dashboard for a home-remodeling contractor.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="glass-card">
+                <span class="timeline-date">Oct 2025</span>
+                <h3 class="h5">Started MasterCyberSec</h3>
+                <p class="mb-0">Began building a certification exam-prep platform that is now live with an AI study assistant.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Contact ===== -->
+      <section class="section section-alt" id="contact">
+        <div class="container">
+          <div class="section-head text-center reveal">
+            <span class="section-eyebrow">06 &mdash; Contact</span>
+            <h2 class="section-title">
+              Let's build something <span class="text-gradient">great together</span>
+            </h2>
+            <p class="section-text mx-auto">
+              Have a project in mind or just want to say hi? My inbox is always open.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <div class="glass-card reveal">
+                <h3 class="h4">Get in touch</h3>
+                <p>I usually reply within 24 hours.</p>
+                <a class="contact-item" href="mailto:abriloman58@gmail.com">
+                  <span class="contact-icon"><i class="bi bi-envelope"></i></span>
+                  <span><small>Email</small>abriloman58@gmail.com</span>
+                </a>
+                <a class="contact-item" href="https://www.linkedin.com/in/awondimu-it" target="_blank" rel="noopener">
+                  <span class="contact-icon"><i class="bi bi-linkedin"></i></span>
+                  <span><small>LinkedIn</small>linkedin.com/in/awondimu-it</span>
+                </a>
+                <div class="contact-item">
+                  <span class="contact-icon"><i class="bi bi-globe2"></i></span>
+                  <span><small>Location</small>Open to remote work</span>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon"><i class="bi bi-briefcase"></i></span>
+                  <span><small>Availability</small>Freelance &amp; full-time roles</span>
+                </div>
+                <div class="social-links mt-4">
+                  <a href="https://github.com/abrilo58" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                  <a href="https://www.linkedin.com/in/awondimu-it" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                  <a href="mailto:abriloman58@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <form class="glass-card contact-form reveal" id="contactForm" novalidate style="--delay: 0.1s">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="name" placeholder="Your name" required />
+                      <label for="name">Your name</label>
+                      <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="email" placeholder="you@example.com" required />
+                      <label for="email">Your email</label>
+                      <div class="invalid-feedback">Please enter a valid email.</div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="subject" placeholder="Subject" required />
+                      <label for="subject">Subject</label>
+                      <div class="invalid-feedback">Please add a subject.</div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea class="form-control" id="message" placeholder="Your message" required></textarea>
+                      <label for="message">Your message</label>
+                      <div class="invalid-feedback">Please write a message.</div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-gradient btn-lg w-100">
+                      Send Message <i class="bi bi-send ms-1"></i>
+                    </button>
+                    <p class="form-status" id="formStatus" role="status"></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-center">
+          <a class="navbar-brand" href="#home">AW<span class="text-gradient">.</span></a>
+          <p class="footer-copy mb-0">
+            &copy; <span id="year">2026</span> Abrham Wondimu. Built with
+            <i class="bi bi-heart-fill text-danger"></i> using HTML, CSS &amp; Bootstrap.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/abrilo58" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/awondimu-it" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:abriloman58@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
