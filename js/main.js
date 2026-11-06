@@ -12,16 +12,19 @@ const BADGE_STACKS = [
     ["bi-filetype-jsx", "#149eca", "React / Next.js"],
     ["bi-wind", "#38bdf8", "Tailwind CSS"],
     ["bi-signpost-split", "#ef4444", "TanStack"],
+    ["bi-terminal-fill", "#5391fe", "PowerShell"],
   ],
   [
     ["bi-filetype-tsx", "#3178c6", "TypeScript"],
     ["bi-hexagon-fill", "#5fa04e", "Node.js"],
     ["bi-server", "#e0234e", "NestJS"],
+    ["bi-cloud-fill", "#0078d4", "Azure"],
   ],
   [
     ["bi-database-fill", "#3ecf8e", "Supabase"],
     ["bi-database", "#4169e1", "PostgreSQL"],
     ["bi-box-seam", "#2496ed", "Docker"],
+    ["bi-activity", "#65a637", "Splunk"],
   ],
 ];
 const BADGE_INTERVAL = 3000;
